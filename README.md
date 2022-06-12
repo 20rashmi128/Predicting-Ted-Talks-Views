@@ -10,7 +10,7 @@ The given TED talks dataset has relevant details such as Title of talk, Speakers
 
 # Approach taken:
 After importing relevant python Libraries, dataset file was loaded, and I gathered basic details about dataset. Then started with the data preparation and cleaning (i.e., Handling Missing values, checking outliers etc.). After data cleaning stage, univariate analysis for each variable was done, followed by bivariate analysis to explore the relationships between two variables using Pair plots, Correlation Matrix etc. Also, used data visualization tools to get better grasp of underlying trends and patterns. 
-Extracted features form textual and categorical variables. Transformed predictor variables using MinMaxScaler. Using correlation matrix, SelectKBest filter method and Sequential Forward selection method, selected important features for modelling. Built simpler models and did evaluation using MAE score. Also, performed Hyper-parameter tuning of XGBoost and randomForest models.
+Extracted features form textual and categorical variables. Transformed predictor variables using MinMaxScaler. Using correlation matrix, SelectKBest filter method and Sequential Forward selection method, selected important features for modelling. Built simpler models and did evaluation using MAE score. Also, performed Hyper-parameter tuning of XGBoost,RandomForest and ExtraTrees models.
 
 
 # Challenges Faced:
@@ -18,7 +18,7 @@ Extracted features form textual and categorical variables. Transformed predictor
 2. Identifying and Eliminating sources of Data Leakages.
 
 # Conclusion:
-During EDA, found out the factors driving the views on a given TED Talk. After model building, achieved average Test MAE of ~550K views. Best performing model was XGBoost after tuning with Best MAE score of ~542K views on test dataset. Based on above, following features turned out to be most important:
+During EDA, found out the factors driving the views on a given TED Talk. After model building, achieved average Test MAE of ~560K views. Best performing model was XGBoost after tuning with Best MAE score of ~542K views on test dataset. Based on above, following features turned out to be most important:
 1.	Average of views of all topics for a Talk.
 2.	Number of Languages in which a Talk is available for viewing.
 3.	How many days ago a talk was published? (i.e, Days for which it was available for viewing online).
