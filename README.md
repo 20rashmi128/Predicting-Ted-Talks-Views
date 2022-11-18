@@ -8,6 +8,25 @@ TED is a non-profit devoted to spreading ideas, usually in the form of short, po
 
 The given TED talks dataset has relevant details such as Title of talk, Speakers details, comments, native languages, topics, description etc. for around 4000 TED Talks. The goal is to identify the factors driving interest of people in Talks and build a model to predict number of views for a given TED talk.
 
+# About TED Talks:
+TED Conferences, LLC is an American media organization that posts talks online for free distribution under the slogan "ideas worth spreading".
+
+# Goals:
+
+EDA part for Insights Generation:
+1. How to get more views on a Ted Talk?
+2. Which features positively impact views for a given TED talk and which features negatively impact?
+3. What are the things TED talks should keep in mind for maximizing views while curating a new TED talk?
+4. Explore most-commented but least-viewed TED talks and basis this prepare future strategies.
+5. What are top 10 most popular TED talks (most-viewed)?
+6. What are top 10 most talked-about TED talks (most-commented)?
+
+Modelling Part:
+1. Create a model that can help Ted predict the number of views for their next talk.
+2. Evaluate models and choose best performing Model.
+
+
+
 # Approach taken:
 After importing relevant python Libraries, dataset file was loaded, and I gathered basic details about dataset. Then started with the data preparation and cleaning (i.e., Handling Missing values, checking outliers etc.). After data cleaning stage, univariate analysis for each variable was done, followed by bivariate analysis to explore the relationships between two variables using Pair plots, Correlation Matrix etc. Also, used data visualization tools to get better grasp of underlying trends and patterns. 
 Extracted features form textual and categorical variables. Transformed predictor variables using MinMaxScaler. Using correlation matrix, SelectKBest filter method and Sequential Forward selection method, selected important features for modelling. Built simpler models and did evaluation using MAE score. Also, performed Hyper-parameter tuning of XGBoost,RandomForest and ExtraTrees models.
@@ -18,7 +37,7 @@ Extracted features form textual and categorical variables. Transformed predictor
 2. Identifying and Eliminating sources of Data Leakages.
 
 # Conclusion:
-During EDA, found out the factors driving the views on a given TED Talk. After model building, achieved average Test MAE of ~560K views. Best performing model was XGBoost after tuning with Best MAE score of ~542K views on test dataset. Based on above, following features turned out to be most important:
+During EDA, found out the factors driving the views on a given TED Talk. After model building, achieved average Test MAE of ~56K views. Best performing model was XGBoost after tuning with Best MAE score of ~54K views on test dataset. Based on above, following features turned out to be most important:
 1.	Average of views of all topics for a Talk.
 2.	Number of Languages in which a Talk is available for viewing.
 3.	How many days ago a talk was published? (i.e, Days for which it was available for viewing online).
